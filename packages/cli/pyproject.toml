@@ -1,0 +1,30 @@
+[project]
+name = "trekk-cli"
+version = "0.1.0"
+description = "Trekk Harvester: copy one Trigify workspace into an Archive you own"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "The Trekk Authors" }]
+dependencies = ["typer==0.27.*", "trekk-harvester==0.1.0", "trekk-archive==0.1.0"]
+
+[project.scripts]
+trekk = "trekk_cli.app:main"
+
+[project.urls]
+Homepage = "https://github.com/trekk-cc/trekk-cli"
+Source = "https://github.com/trekk-cc/trekk-cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trekk_cli"]
+
+[tool.hatch.build.targets.wheel.extra-metadata]
+"RELEASE-NOTES.md" = "RELEASE-NOTES.md"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/trekk_cli", "README.md", "RELEASE-NOTES.md", "LICENSE", "NOTICE"]

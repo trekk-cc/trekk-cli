@@ -1,0 +1,13 @@
+# Workspace root of the public trekk-cc/trekk-cli repository (copied there by
+# `just release-publish`): `uv sync` installs the three client packages for development,
+# `uv build --all-packages` builds their wheels and sdists.
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+trekk-archive = { workspace = true }
+trekk-harvester = { workspace = true }
+trekk-cli = { workspace = true }

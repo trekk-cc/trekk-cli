@@ -1,0 +1,1701 @@
+{
+  "$defs": {
+    "AgentMemoryRecord": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "agent_memory_record",
+          "default": "agent_memory_record",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "table_id": {
+          "minLength": 1,
+          "title": "Table Id",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "table_id"
+      ],
+      "title": "AgentMemoryRecord",
+      "type": "object"
+    },
+    "AgentMemoryTable": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "agent_memory_table",
+          "default": "agent_memory_table",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "AgentMemoryTable",
+      "type": "object"
+    },
+    "CreditLedgerEntry": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "credit_ledger_entry",
+          "default": "credit_ledger_entry",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "CreditLedgerEntry",
+      "type": "object"
+    },
+    "Insight": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "insight",
+          "default": "insight",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Insight",
+      "type": "object"
+    },
+    "Integration": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "integration",
+          "default": "integration",
+          "title": "Kind",
+          "type": "string"
+        },
+        "mappings": {
+          "additionalProperties": {
+            "additionalProperties": {
+              "$ref": "#/$defs/JsonValue"
+            },
+            "type": "object"
+          },
+          "title": "Mappings",
+          "type": "object"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "mappings"
+      ],
+      "title": "Integration",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "LegacyRoute": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "legacy_route",
+          "default": "legacy_route",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "route": {
+          "minLength": 1,
+          "title": "Route",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "route"
+      ],
+      "title": "LegacyRoute",
+      "type": "object"
+    },
+    "List": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "list",
+          "default": "list",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "List",
+      "type": "object"
+    },
+    "ListMember": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "list_member",
+          "default": "list_member",
+          "title": "Kind",
+          "type": "string"
+        },
+        "list_id": {
+          "minLength": 1,
+          "title": "List Id",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "list_id"
+      ],
+      "title": "ListMember",
+      "type": "object"
+    },
+    "Monitor": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "monitor",
+          "default": "monitor",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Monitor",
+      "type": "object"
+    },
+    "MonitorPostResult": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "monitor_post_result",
+          "default": "monitor_post_result",
+          "title": "Kind",
+          "type": "string"
+        },
+        "monitor_id": {
+          "minLength": 1,
+          "title": "Monitor Id",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "post_url": {
+          "minLength": 1,
+          "title": "Post Url",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "monitor_id",
+        "post_url"
+      ],
+      "title": "MonitorPostResult",
+      "type": "object"
+    },
+    "MonitorResult": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "monitor_result",
+          "default": "monitor_result",
+          "title": "Kind",
+          "type": "string"
+        },
+        "monitor_id": {
+          "minLength": 1,
+          "title": "Monitor Id",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "monitor_id"
+      ],
+      "title": "MonitorResult",
+      "type": "object"
+    },
+    "Org": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "org",
+          "default": "org",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Org",
+      "type": "object"
+    },
+    "OutputRow": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "output_row",
+          "default": "output_row",
+          "title": "Kind",
+          "type": "string"
+        },
+        "loop_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Loop Index"
+        },
+        "parent_row_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Row Id"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "run_id": {
+          "minLength": 1,
+          "title": "Run Id",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        },
+        "workflow_id": {
+          "minLength": 1,
+          "title": "Workflow Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "workflow_id",
+        "run_id",
+        "parent_row_id",
+        "loop_index"
+      ],
+      "title": "OutputRow",
+      "type": "object"
+    },
+    "Partial": {
+      "description": "The object could not be harvested in full; `reason` says why.",
+      "properties": {
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reason"
+      ],
+      "title": "Partial",
+      "type": "object"
+    },
+    "ReservedKind": {
+      "description": "Kinds reserved for M4; never valid as `kind` in v1.",
+      "enum": [
+        "account_signal",
+        "dynamic_list",
+        "social_reaction"
+      ],
+      "type": "string"
+    },
+    "Run": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "run",
+          "default": "run",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        },
+        "workflow_id": {
+          "minLength": 1,
+          "title": "Workflow Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "workflow_id"
+      ],
+      "title": "Run",
+      "type": "object"
+    },
+    "Search": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "search",
+          "default": "search",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Search",
+      "type": "object"
+    },
+    "SearchResult": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "search_result",
+          "default": "search_result",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "search_id": {
+          "minLength": 1,
+          "title": "Search Id",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "search_id"
+      ],
+      "title": "SearchResult",
+      "type": "object"
+    },
+    "Signal": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "signal",
+          "default": "signal",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Signal",
+      "type": "object"
+    },
+    "SignalSubscription": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "signal_subscription",
+          "default": "signal_subscription",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "SignalSubscription",
+      "type": "object"
+    },
+    "Target": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "target",
+          "default": "target",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "target_list_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Target List Id"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "target_list_id"
+      ],
+      "title": "Target",
+      "type": "object"
+    },
+    "TargetList": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "target_list",
+          "default": "target_list",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "TargetList",
+      "type": "object"
+    },
+    "Topic": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "topic",
+          "default": "topic",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Topic",
+      "type": "object"
+    },
+    "TopicEngagement": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "topic_engagement",
+          "default": "topic_engagement",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "topic_id": {
+          "minLength": 1,
+          "title": "Topic Id",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "topic_id"
+      ],
+      "title": "TopicEngagement",
+      "type": "object"
+    },
+    "UsageRecord": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "usage_record",
+          "default": "usage_record",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "UsageRecord",
+      "type": "object"
+    },
+    "Workflow": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "workflow",
+          "default": "workflow",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind"
+      ],
+      "title": "Workflow",
+      "type": "object"
+    },
+    "WorkflowDraft": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "workflow_draft",
+          "default": "workflow_draft",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        },
+        "workflow_id": {
+          "minLength": 1,
+          "title": "Workflow Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "workflow_id"
+      ],
+      "title": "WorkflowDraft",
+      "type": "object"
+    },
+    "WorkflowTable": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "workflow_table",
+          "default": "workflow_table",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        },
+        "workflow_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Workflow Id"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "workflow_id"
+      ],
+      "title": "WorkflowTable",
+      "type": "object"
+    },
+    "WorkflowTableRow": {
+      "properties": {
+        "data": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Data",
+          "type": "object"
+        },
+        "kind": {
+          "const": "workflow_table_row",
+          "default": "workflow_table_row",
+          "title": "Kind",
+          "type": "string"
+        },
+        "partial": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Partial"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source": {
+          "enum": [
+            "api",
+            "fallback",
+            "missing"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "table_id": {
+          "minLength": 1,
+          "title": "Table Id",
+          "type": "string"
+        },
+        "trigify_id": {
+          "minLength": 1,
+          "title": "Trigify Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigify_id",
+        "source",
+        "partial",
+        "data",
+        "kind",
+        "table_id"
+      ],
+      "title": "WorkflowTableRow",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "discriminator": {
+    "mapping": {
+      "agent_memory_record": "#/$defs/AgentMemoryRecord",
+      "agent_memory_table": "#/$defs/AgentMemoryTable",
+      "credit_ledger_entry": "#/$defs/CreditLedgerEntry",
+      "insight": "#/$defs/Insight",
+      "integration": "#/$defs/Integration",
+      "legacy_route": "#/$defs/LegacyRoute",
+      "list": "#/$defs/List",
+      "list_member": "#/$defs/ListMember",
+      "monitor": "#/$defs/Monitor",
+      "monitor_post_result": "#/$defs/MonitorPostResult",
+      "monitor_result": "#/$defs/MonitorResult",
+      "org": "#/$defs/Org",
+      "output_row": "#/$defs/OutputRow",
+      "run": "#/$defs/Run",
+      "search": "#/$defs/Search",
+      "search_result": "#/$defs/SearchResult",
+      "signal": "#/$defs/Signal",
+      "signal_subscription": "#/$defs/SignalSubscription",
+      "target": "#/$defs/Target",
+      "target_list": "#/$defs/TargetList",
+      "topic": "#/$defs/Topic",
+      "topic_engagement": "#/$defs/TopicEngagement",
+      "usage_record": "#/$defs/UsageRecord",
+      "workflow": "#/$defs/Workflow",
+      "workflow_draft": "#/$defs/WorkflowDraft",
+      "workflow_table": "#/$defs/WorkflowTable",
+      "workflow_table_row": "#/$defs/WorkflowTableRow"
+    },
+    "propertyName": "kind"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Org"
+    },
+    {
+      "$ref": "#/$defs/Integration"
+    },
+    {
+      "$ref": "#/$defs/CreditLedgerEntry"
+    },
+    {
+      "$ref": "#/$defs/UsageRecord"
+    },
+    {
+      "$ref": "#/$defs/Search"
+    },
+    {
+      "$ref": "#/$defs/SearchResult"
+    },
+    {
+      "$ref": "#/$defs/Monitor"
+    },
+    {
+      "$ref": "#/$defs/MonitorResult"
+    },
+    {
+      "$ref": "#/$defs/MonitorPostResult"
+    },
+    {
+      "$ref": "#/$defs/Topic"
+    },
+    {
+      "$ref": "#/$defs/TopicEngagement"
+    },
+    {
+      "$ref": "#/$defs/TargetList"
+    },
+    {
+      "$ref": "#/$defs/Target"
+    },
+    {
+      "$ref": "#/$defs/SignalSubscription"
+    },
+    {
+      "$ref": "#/$defs/Signal"
+    },
+    {
+      "$ref": "#/$defs/Insight"
+    },
+    {
+      "$ref": "#/$defs/Workflow"
+    },
+    {
+      "$ref": "#/$defs/WorkflowDraft"
+    },
+    {
+      "$ref": "#/$defs/Run"
+    },
+    {
+      "$ref": "#/$defs/OutputRow"
+    },
+    {
+      "$ref": "#/$defs/WorkflowTable"
+    },
+    {
+      "$ref": "#/$defs/WorkflowTableRow"
+    },
+    {
+      "$ref": "#/$defs/List"
+    },
+    {
+      "$ref": "#/$defs/ListMember"
+    },
+    {
+      "$ref": "#/$defs/AgentMemoryTable"
+    },
+    {
+      "$ref": "#/$defs/AgentMemoryRecord"
+    },
+    {
+      "$ref": "#/$defs/LegacyRoute"
+    }
+  ],
+  "title": "ArchiveObject",
+  "x-trekk-credential-patterns": [
+    "(?<![A-Za-z0-9])trig_[A-Za-z0-9_-]{16,}",
+    "(?<![A-Za-z0-9])ya29\\.[\\w-]{20,}",
+    "(?<![A-Za-z0-9])xox[abpsr]-[\\w-]{10,}",
+    "(?<![A-Za-z0-9])gh[pousr]_[A-Za-z0-9]{30,}",
+    "(?<![A-Za-z0-9])github_pat_[A-Za-z0-9_]{20,}",
+    "(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{20,}",
+    "(?<![A-Za-z0-9])sk_live_[A-Za-z0-9]{16,}",
+    "(?<![A-Za-z0-9])sk_test_[A-Za-z0-9]{16,}",
+    "(?<![A-Za-z0-9])rk_live_[A-Za-z0-9]{16,}",
+    "(?<![A-Za-z0-9])AKIA[0-9A-Z]{16}",
+    "(?<![A-Za-z0-9])AIza[0-9A-Za-z_-]{35}",
+    "(?<![A-Za-z0-9])pat-(?:na|eu)1-[0-9a-f-]{36}",
+    "(?<![A-Za-z0-9])eyJ[\\w-]{10,}\\.[\\w-]{10,}\\.[\\w-]{10,}",
+    "(?<![A-Za-z0-9])(?i:bearer)\\s+[\\w.~+/-]{20,}"
+  ],
+  "x-trekk-secret-fields": [
+    "accesstoken",
+    "refreshtoken",
+    "idtoken",
+    "apikey",
+    "xapikey",
+    "clientsecret",
+    "password",
+    "secret",
+    "privatekey",
+    "authorization",
+    "bearertoken",
+    "oauthtoken",
+    "apitoken",
+    "authtoken",
+    "sessiontoken",
+    "webhooksecret",
+    "signingsecret",
+    "cookie"
+  ],
+  "x-trekk-spec-version": "1.3.0"
+}
